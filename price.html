@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прайс-лист — PrimArte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="index.html"><img src="assets/logo.png" alt="PrimArte" class="header__logo"></a>
+            <nav class="header__text">
+                <a href="catalog.html" class="nav-item">Каталог товаров</a>
+                <a href="price.html" class="nav-item">Прайс-лист</a>
+                <a href="contacts.html" class="nav-item">Контакты</a>
+                <a href="about.html" class="nav-item">О компании</a>
+            </nav>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1 class="page-hero__title">Прайс-<span>лист</span></h1>
+            <p class="page-hero__subtitle">Стоимость лицензий на изображения. Цена зависит от типа использования и разрешения файла.</p>
+        </section>
+
+        <section class="price">
+            <div class="price__table-wrap">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Тип лицензии</th>
+                            <th>Цена</th>
+                            <th>Коммерческое использование</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cell-label">Standard</td>
+                            <td class="cell-price">490 ₽</td>
+                            <td class="cell-no">нет</td>
+                        </tr>
+                        <tr class="row-highlight">
+                            <td class="cell-label">Extended</td>
+                            <td class="cell-price">990 ₽</td>
+                            <td class="cell-yes">включено</td>
+                        </tr>
+                        <tr>
+                            <td class="cell-label">Exclusive</td>
+                            <td class="cell-price">2 490 ₽</td>
+                            <td class="cell-yes">включено</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <img src="assets/logo.png" alt="PrimArte" class="footer__logo">
+            <nav class="footer__links">
+                <a href="catalog.html">Каталог товаров</a>
+                <a href="price.html">Прайс-лист</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="about.html">О компании</a>
+            </nav>
+            <p class="footer__copy">&copy; 2026 PrimArte</p>
+        </div>
+    </footer>
+</body>
+</html>
