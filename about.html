@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О компании — PrimArte</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>О компании — PrimArte</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="print.css" id="PrintStyles">
 </head>
 <body>
-    <header class="header">
-        <nav class="header__nav">
-            <a href="index.html"><img src="assets/logo.png" alt="PrimArte" class="header__logo"></a>
-            <nav class="header__text">
-                <a href="catalog.html" class="nav-item">Каталог товаров</a>
-                <a href="price.html" class="nav-item">Прайс-лист</a>
-                <a href="contacts.html" class="nav-item">Контакты</a>
-                <a href="about.html" class="nav-item">О компании</a>
-            </nav>
-        </nav>
-    </header>
+	<header class="header">
+		<nav class="header__nav">
+			<a href="index.html">
+				<img src="assets/logo.png" alt="PrimArte" class="header__logo">
+			</a>
+			<input type="checkbox" id="menu-toggle" class="menu-toggle">
+			<label for="menu-toggle" class="menu-toggle-label" aria-label="Меню">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<ul class="header__menu">
+				<li><a href="catalog.html" class="nav-item">Каталог товаров</a></li>
+				<li><a href="price.html" class="nav-item">Прайс-лист</a></li>
+				<li><a href="contacts.html" class="nav-item">Контакты</a></li>
+				<li><a href="about.html" class="nav-item">О компании</a></li>
+			</ul>
+			<button type="button" class="print_toggleSwitch" id="printToggle" aria-pressed="false">
+				Версия для печати
+			</button>
+		</nav>
+	</header>
 
-    <main>
-        <section class="page-hero">
-            <h1 class="page-hero__title">О <span>компании</span></h1>
-            <p class="page-hero__subtitle">PrimArte — маркетплейс изображений, который с 2025 года помогает авторам находить покупателей, а покупателям — находить нужные визуальные образы.</p>
-        </section>
+	<main>
+		<section class="page-hero">
+			<h1 class="page-hero__title">О <span>компании</span></h1>
+			<p class="page-hero__subtitle">PrimArte — маркетплейс изображений, который с 2025 года помогает авторам находить покупателей, а покупателям — находить нужные визуальные образы.</p>
+		</section>
 
-        <section class="stats">
-            <div class="stats__grid">
-                <div class="stat-card">
-                    <span class="stat-card__value">2025</span>
-                    <span class="stat-card__label">год основания</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-card__value">12&nbsp;000+</span>
-                    <span class="stat-card__label">изображений</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-card__value">480+</span>
-                    <span class="stat-card__label">авторов</span>
-                </div>
-            </div>
-        </section>
-    </main>
+		<section class="stats">
+			<div class="stats__grid">
+				<div class="stat-card">
+					<span class="stat-card__value">2025</span>
+					<span class="stat-card__label">год основания</span>
+				</div>
+				<div class="stat-card">
+					<span class="stat-card__value">12&nbsp;000+</span>
+					<span class="stat-card__label">изображений</span>
+				</div>
+				<div class="stat-card">
+					<span class="stat-card__value">480+</span>
+					<span class="stat-card__label">авторов</span>
+				</div>
+			</div>
+		</section>
+	</main>
 
-    <footer class="footer">
-        <div class="footer__inner">
-            <img src="assets/logo.png" alt="PrimArte" class="footer__logo">
-            <nav class="footer__links">
-                <a href="catalog.html">Каталог товаров</a>
-                <a href="price.html">Прайс-лист</a>
-                <a href="contacts.html">Контакты</a>
-                <a href="about.html">О компании</a>
-            </nav>
-            <p class="footer__copy">&copy; 2026 PrimArte</p>
-        </div>
-    </footer>
+	<footer class="footer">
+		<div class="footer__inner">
+			<img src="assets/logo.png" alt="PrimArte" class="footer__logo">
+			<ul class="footer__links">
+				<li><a href="catalog.html">Каталог товаров</a></li>
+				<li><a href="price.html">Прайс-лист</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+				<li><a href="about.html">О компании</a></li>
+			</ul>
+			<p class="footer__copy">&copy; 2026 PrimArte</p>
+		</div>
+	</footer>
+	<script src="print.js" defer></script>
 </body>
 </html>

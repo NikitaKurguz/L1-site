@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты — PrimArte</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Контакты — PrimArte</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="print.css" id="PrintStyles">
 </head>
 <body>
-    <header class="header">
-        <nav class="header__nav">
-            <a href="index.html"><img src="assets/logo.png" alt="PrimArte" class="header__logo"></a>
-            <nav class="header__text">
-                <a href="catalog.html" class="nav-item">Каталог товаров</a>
-                <a href="price.html" class="nav-item">Прайс-лист</a>
-                <a href="contacts.html" class="nav-item">Контакты</a>
-                <a href="about.html" class="nav-item">О компании</a>
-            </nav>
-        </nav>
-    </header>
+	<header class="header">
+		<nav class="header__nav">
+			<a href="index.html">
+				<img src="assets/logo.png" alt="PrimArte" class="header__logo">
+			</a>
+			<input type="checkbox" id="menu-toggle" class="menu-toggle">
+			<label for="menu-toggle" class="menu-toggle-label" aria-label="Меню">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<ul class="header__menu">
+				<li><a href="catalog.html" class="nav-item">Каталог товаров</a></li>
+				<li><a href="price.html" class="nav-item">Прайс-лист</a></li>
+				<li><a href="contacts.html" class="nav-item">Контакты</a></li>
+				<li><a href="about.html" class="nav-item">О компании</a></li>
+			</ul>
+			<button type="button" class="print_toggleSwitch" id="printToggle" aria-pressed="false">
+				Версия для печати
+			</button>
+		</nav>
+	</header>
 
-    <main>
-        <section class="page-hero">
-            <h1 class="page-hero__title">Кон<span>такты</span></h1>
-            <p class="page-hero__subtitle">бульвар 50 лет Октября, 7 · +7 (952) 960-15-67 · nikita@primarte.ru</p>
-        </section>
+	<main>
+		<section class="page-hero">
+			<h1 class="page-hero__title">Кон<span>такты</span></h1>
+			<p class="page-hero__subtitle">бульвар 50 лет Октября, 7 · +7 (952) 960-15-67 · nikita@primarte.ru</p>
+		</section>
 
-        <section class="contacts">
-            <div class="contacts__map">
-                <iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=34.304039%2C53.304674&z=16&pt=34.304039,53.304674,pm2rdm&l=map"
-                    width="100%" height="360" frameborder="0" loading="lazy"
-                    title="Карта проезда PrimArte">
-                </iframe>
-            </div>
-        </section>
-    </main>
+		<section class="contacts">
+			<div class="contacts__map">
+				<iframe
+					src="https://yandex.ru/map-widget/v1/?ll=34.304039%2C53.304674&z=16&pt=34.304039,53.304674,pm2rdm&l=map"
+					width="100%" height="360" loading="lazy"
+					title="Карта проезда PrimArte">
+				</iframe>
+			</div>
+			<div class="contacts__print">
+				<p><strong>Адрес:</strong> бульвар 50 лет Октября, 7</p>
+				<p><strong>Телефон:</strong> +7 (952) 960-15-67</p>
+				<p><strong>Email:</strong> nikita@primarte.ru</p>
+			</div>
+		</section>
+	</main>
 
-    <footer class="footer">
-        <div class="footer__inner">
-            <img src="assets/logo.png" alt="PrimArte" class="footer__logo">
-            <nav class="footer__links">
-                <a href="catalog.html">Каталог товаров</a>
-                <a href="price.html">Прайс-лист</a>
-                <a href="contacts.html">Контакты</a>
-                <a href="about.html">О компании</a>
-            </nav>
-            <p class="footer__copy">&copy; 2026 PrimArte</p>
-        </div>
-    </footer>
+	<footer class="footer">
+		<div class="footer__inner">
+			<img src="assets/logo.png" alt="PrimArte" class="footer__logo">
+			<ul class="footer__links">
+				<li><a href="catalog.html">Каталог товаров</a></li>
+				<li><a href="price.html">Прайс-лист</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+				<li><a href="about.html">О компании</a></li>
+			</ul>
+			<p class="footer__copy">&copy; 2026 PrimArte</p>
+		</div>
+	</footer>
+	<script src="print.js" defer></script>
 </body>
 </html>
