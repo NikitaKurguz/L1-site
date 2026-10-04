@@ -7,8 +7,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="print.css" id="PrintStyles">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/print.css" id="PrintStyles">
 </head>
 <body>
 	<header class="header">
@@ -43,13 +43,13 @@
 			<div class="catalog__layout">
 
 				<aside class="filters" id="filters" aria-label="Фильтр изображений">
-					<!-- фильтры построит catalog.js -->
+					
 				</aside>
 
 				<div class="catalog__results">
 					<p class="catalog__counter" id="counter"></p>
-					<div class="catalog__grid" id="elements">
-						<!-- карточки построит catalog.js -->
+					<div id="elements">
+
 					</div>
 					<p class="catalog__empty" id="empty" hidden>
 						Ничего не найдено. Попробуйте изменить условия фильтра.
@@ -72,7 +72,7 @@
 			<p class="footer__copy">&copy; 2026 PrimArte</p>
 		</div>
 	</footer>
-	<script src="print.js" defer></script>
-	<script src="catalog_filter.js"></script>
+	<script src="js/print.js" defer></script>
+	<script src="js/catalog_filter.js" defer></script>
 </body>
 </html>
